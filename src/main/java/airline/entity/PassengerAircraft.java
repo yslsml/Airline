@@ -14,12 +14,12 @@ public class PassengerAircraft extends Aircraft{
 
     @Override
     public String toString() {
-        return "\nPassengerAircraft {" +
+        return "\nPassenger Aircraft {" +
                 "\n id = " + getAircraftId() +
                 "\n name = " + getName() +
                 "\n flight range = " + getFlightRange() +
                 "\n fuel consumption = " + getFuelConsumption() +
-                "\n numberOfSeats = " + numberOfSeats +
+                "\n number of seats = " + numberOfSeats +
                 "\n}";
     }
 }
