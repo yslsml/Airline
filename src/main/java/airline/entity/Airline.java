@@ -4,19 +4,38 @@ import airline.excepcion.InvalidDataException;
 
 import java.util.LinkedList;
 
+//Посчитать общую вместимость и грузоподъемность.
 public class Airline {
     private LinkedList<Aircraft> aircrafts;
+    private double totalLoadCapacity;
+    private int totalNumberOfSeats;
 
     public Airline(LinkedList<Aircraft> aircrafts) {
         this.aircrafts = aircrafts;
+        for(Aircraft aircraft : aircrafts) {
+            if (aircraft instanceof CargoAircraft) {
+                this.totalLoadCapacity += ((CargoAircraft) aircraft).getLoadCapacity();
+            }
+            if (aircraft instanceof PassengerAircraft) {
+                this.totalNumberOfSeats += ((PassengerAircraft) aircraft).getNumberOfSeats();
+            }
+        }
     }
 
     public Airline(){
         this.aircrafts = new LinkedList<>();
+        this.totalLoadCapacity = 0;
+        this.totalNumberOfSeats = 0;
     }
 
     public void addAircraft(Aircraft aircraft){
         aircrafts.addLast(aircraft);
+        if (aircraft instanceof CargoAircraft) {
+            this.totalLoadCapacity += ((CargoAircraft) aircraft).getLoadCapacity();
+        }
+        if (aircraft instanceof PassengerAircraft) {
+            this.totalNumberOfSeats += ((PassengerAircraft) aircraft).getNumberOfSeats();
+        }
     }
 
     public LinkedList<Aircraft> getAircrafts(){
