@@ -11,9 +11,8 @@ import org.apache.logging.log4j.Logger;
 import java.util.Collections;
 import java.util.LinkedList;
 
+// Провести сортировку самолетов компании по дальности полета.
 public class AircraftSorter {
-    // Провести сортировку самолетов компании по дальности полета.
-
     private static final Logger LOGGER = LogManager.getLogger(AircraftSorter.class);
 
     public void sortByFlightRange(Airline airline){

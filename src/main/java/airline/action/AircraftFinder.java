@@ -7,8 +7,6 @@ import airline.excepcion.IncorrectValueException;
 import java.util.LinkedList;
 import java.util.List;
 
-//Посчитать общую вместимость и грузоподъемность.
-
 // Найти самолет в компании, соответствующий заданному диапазону параметров потребления горючего.
 public class AircraftFinder {
     public LinkedList<Aircraft> findByFuelConsumption(Airline airline, float minFuelConsumption, float maxFuelConsumption) throws IncorrectValueException {
