@@ -29,7 +29,7 @@ public class AircraftStorage {
         }
     }
 
-    public int countOfSweets(){
+    public int countOfAircrafts(){
         return this.aircrafts.size();
     }
 
