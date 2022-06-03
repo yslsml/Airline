@@ -48,7 +48,12 @@ public class AircraftParser {
             int index = source.indexOf(AircraftTags.ID) + AircraftTags.ID.length();
             Scanner scanner = new Scanner(source.substring(index));
             scanner.useDelimiter("=| ");
-            return scanner.nextLong();
+            long tmp = scanner.nextLong();
+            if(AircraftValidator.isPositiveValue(tmp)) {
+                return tmp;
+            } else {
+                throw new InvalidDataException("Invalid aircraft id");
+            }
         }else{
             throw new InvalidDataException("Invalid aircraft");
         }
@@ -60,7 +65,13 @@ public class AircraftParser {
             Scanner scanner = new Scanner(source.substring(index));
             scanner.useDelimiter("=| ");
             scanner.useLocale(Locale.US);
-            return scanner.nextFloat();
+            //return scanner.nextFloat();
+            float tmp = scanner.nextFloat();
+            if(AircraftValidator.isPositiveValue(tmp)) {
+                return tmp;
+            } else {
+                throw new InvalidDataException("Invalid aircraft flight range");
+            }
         }{
             throw new InvalidDataException("Invalid aircraft");
         }
@@ -72,7 +83,13 @@ public class AircraftParser {
             Scanner scanner = new Scanner(source.substring(index));
             scanner.useDelimiter("=| ");
             scanner.useLocale(Locale.US);
-            return scanner.nextFloat();
+            //return scanner.nextFloat();
+            float tmp = scanner.nextFloat();
+            if(AircraftValidator.isPositiveValue(tmp)) {
+                return tmp;
+            } else {
+                throw new InvalidDataException("Invalid aircraft fuel consumption");
+            }
         }{
             throw new InvalidDataException("Invalid aircraft");
         }
@@ -84,7 +101,13 @@ public class AircraftParser {
             Scanner scanner = new Scanner(source.substring(index));
             scanner.useDelimiter("=| ");
             scanner.useLocale(Locale.US);
-            return scanner.nextFloat();
+            //return scanner.nextFloat();
+            float tmp = scanner.nextFloat();
+            if(AircraftValidator.isPositiveValue(tmp)) {
+                return tmp;
+            } else {
+                throw new InvalidDataException("Invalid aircraft load capacity");
+            }
         }{
             throw new InvalidDataException("Invalid aircraft");
         }
@@ -95,7 +118,13 @@ public class AircraftParser {
             int index = source.indexOf(AircraftTags.NUMBER_OF_SEATS) + AircraftTags.NUMBER_OF_SEATS.length();
             Scanner scanner = new Scanner(source.substring(index));
             scanner.useDelimiter("=| ");
-            return scanner.nextInt();
+            //return scanner.nextInt();
+            int tmp = scanner.nextInt();
+            if(AircraftValidator.isPositiveValue(tmp)) {
+                return tmp;
+            } else {
+                throw new InvalidDataException("Invalid aircraft number of seats");
+            }
         }else{
             throw new InvalidDataException("Invalid aircraft");
         }
@@ -106,7 +135,13 @@ public class AircraftParser {
             int index = source.indexOf(AircraftTags.NUMBER_OF_BOMBS) + AircraftTags.NUMBER_OF_BOMBS.length();
             Scanner scanner = new Scanner(source.substring(index));
             scanner.useDelimiter("=| ");
-            return scanner.nextInt();
+            //return scanner.nextInt();
+            int tmp = scanner.nextInt();
+            if(AircraftValidator.isPositiveValue(tmp)) {
+                return tmp;
+            } else {
+                throw new InvalidDataException("Invalid aircraft number of bombs");
+            }
         }else{
             throw new InvalidDataException("Invalid aircraft");
         }
