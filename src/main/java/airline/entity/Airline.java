@@ -28,6 +28,16 @@ public class Airline {
         this.totalNumberOfSeats = 0;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    protected Airline clone() throws CloneNotSupportedException {
+        return (Airline)super.clone();
+    }
+
     public void addAircraft(Aircraft aircraft){
         aircrafts.addLast(aircraft);
         if (aircraft instanceof CargoAircraft) {

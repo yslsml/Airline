@@ -22,4 +22,14 @@ public class CargoAircraft extends Aircraft{
                 "\n load capacity = " + loadCapacity +
                 "\n}";
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    protected CargoAircraft clone() throws CloneNotSupportedException {
+        return (CargoAircraft) super.clone();
+    }
 }

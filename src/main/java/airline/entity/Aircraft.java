@@ -29,4 +29,14 @@ public abstract class Aircraft {
     public double getFuelConsumption() {
         return fuelConsumption;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    protected Aircraft clone() throws CloneNotSupportedException {
+        return (Aircraft) super.clone();
+    }
 }
