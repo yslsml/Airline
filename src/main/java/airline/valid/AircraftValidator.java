@@ -37,4 +37,17 @@ public class AircraftValidator {
         }
         return false;
     }
+
+    public static boolean isPositiveValue(int num) {
+        return num >= 0;
+    }
+
+    public static boolean isPositiveValue(float num) {
+        return num >= 0;
+    }
+
+    public static boolean isPositiveValue(long num) {
+        return num >= 0;
+    }
+
 }
